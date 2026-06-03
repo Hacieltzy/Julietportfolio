@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #FAF9F6;
+  --color-slate-900: #FFFFFF;
+  --color-slate-850: rgba(0, 0, 0, 0.05);
+  --color-slate-800: #E4E4E7;
+  --color-slate-700: #71717A;
+  --color-slate-600: #71717A;
+  --color-slate-500: #A1A1AA;
+  --color-slate-400: #52525B;
+  --color-slate-350: #18181B;
+  --color-slate-300: #18181B;
+  --color-slate-200: #FAF9F6;
+  --color-slate-100: #F4F4F5;
+  --color-slate-50: #F4F4F5;
+  
+  --color-amber-300: #C5A030;
+  --color-amber-400: #B59020;
+  --color-amber-500: #B59020;
+  --color-amber-600: #937010;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF9F6;
+  }
+  
+  body {
+    background-color: #FAF9F6;
+    color: #18181B;
+    font-family: var(--font-sans);
+  }
+  
+  /* Selection styling matching gold branding theme */
+  ::selection {
+    background-color: rgba(181, 144, 32, 0.15);
+    color: #B59020;
+  }
+
+  /* Custom Modern Slate scrollbar style */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #FAF9F6;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #E4E4E7;
+    border-radius: 9999px;
+    border: 1px solid rgba(181, 144, 32, 0.05);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4D4D8;
+  }
+}
+
+/* Premium Bento Grid card structures */
+.bento-grid-container {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.bento-card-interactive {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-radius: 1.25rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.bento-card-interactive:hover {
+  border-color: #B59020 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px -10px rgba(181, 144, 32, 0.12);
+}
+
+/* Micro-animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+.glow-animation {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
