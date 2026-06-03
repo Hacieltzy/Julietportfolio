@@ -141,50 +141,110 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile nav dropdown drawer */}
+      {/* Mobile nav sliding sidebar drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            id="mobile-drawer"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden bg-slate-900 border-b border-zinc-200 relative z-40 overflow-hidden"
-          >
-            <div className="px-4 pt-3 pb-6 space-y-3 shadow-sm">
-              {navLinks.map((link) => {
-                const currentId = link.href.replace("#", "");
-                const isActive = activeSection === currentId;
-                return (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    id={`mobile-nav-link-${currentId}`}
-                    onClick={(e) => handleScrollTo(e, link.href)}
-                    className={`block px-4 py-3 text-sm font-mono tracking-wider rounded-xl transition-all cursor-pointer ${
-                      isActive
-                        ? "bg-amber-500/10 text-amber-600 border-l-4 border-amber-500 font-bold"
-                        : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900"
-                    }`}
+          <>
+            {/* Backdrop Overlay */}
+            <motion.div
+              id="mobile-sidebar-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-40 md:hidden"
+            />
+
+            {/* Sidebar Control Panel container */}
+            <motion.div
+              id="mobile-sidebar-panel"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed right-0 top-0 h-screen w-[280px] sm:w-[325px] bg-slate-900 border-l border-slate-850 shadow-2xl z-50 md:hidden flex flex-col justify-between"
+            >
+              {/* Header inside Sidebar */}
+              <div className="p-5 border-b border-slate-850">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 rounded-full border border-zinc-200/20 bg-slate-800 flex items-center justify-center shadow-sm relative overflow-hidden">
+                      <span className="text-amber-500 font-serif font-extrabold tracking-widest text-sm">JC</span>
+                    </div>
+                    <span className="text-zinc-100 font-sans font-extrabold tracking-tight text-sm">
+                      {PORTFOLIO_NAME}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="p-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors focus:outline-none cursor-pointer"
+                    aria-label="Close Menu"
                   >
-                    {link.label}
+                    <X size={20} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Navigation list items */}
+              <div className="flex-1 overflow-y-auto px-4 py-6 space-y-2">
+                <span className="block text-[10px] uppercase tracking-widest text-zinc-500 font-mono mb-4 px-3 font-semibold">
+                  Navigation Menu
+                </span>
+                {navLinks.map((link) => {
+                  const currentId = link.href.replace("#", "");
+                  const isActive = activeSection === currentId;
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      id={`mobile-nav-link-${currentId}`}
+                      onClick={(e) => handleScrollTo(e, link.href)}
+                      className={`block px-4 py-3.5 text-xs font-mono tracking-wider rounded-xl transition-all cursor-pointer ${
+                        isActive
+                          ? "bg-amber-500/10 text-amber-500 border-l-4 border-amber-500 font-bold"
+                          : "text-zinc-400 hover:bg-slate-800/40 hover:text-white"
+                      }`}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                })}
+              </div>
+
+              {/* Sidebar Footer Contacts */}
+              <div className="p-5 border-t border-slate-850 bg-slate-950/40 space-y-4">
+                <div className="space-y-2">
+                  <div className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest">
+                    Quick Contact
+                  </div>
+                  <a 
+                    href="mailto:chinyejuliet01@gmail.com"
+                    className="block text-xs font-mono text-zinc-300 hover:text-amber-500 transition-colors break-all"
+                  >
+                    chinyejuliet01@gmail.com
                   </a>
-                );
-              })}
-              <div className="pt-4 border-t border-zinc-100 px-4">
+                  <a 
+                    href="https://wa.me/2347047707469"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-xs font-mono text-zinc-300 hover:text-amber-500 transition-colors"
+                  >
+                    WhatsApp: +234 704 770 7469
+                  </a>
+                </div>
+
                 <a
                   href="#contact"
                   id="mobile-nav-cta"
                   onClick={(e) => handleScrollTo(e, "#contact")}
-                  className="w-full py-3 bg-amber-500 hover:bg-amber-600 text-white text-center font-mono font-bold tracking-wider rounded-xl flex items-center justify-center space-x-2 transition-colors cursor-pointer shadow-sm"
+                  className="w-full py-3 bg-amber-500 hover:bg-amber-600 text-white text-center font-mono text-xs font-bold tracking-wider rounded-xl flex items-center justify-center space-x-2 transition-colors cursor-pointer shadow-sm"
                 >
-                  <UserCheck size={16} />
+                  <UserCheck size={14} />
                   <span>LET'S WORK TOGETHER</span>
                 </a>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

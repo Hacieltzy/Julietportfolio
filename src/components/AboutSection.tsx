@@ -30,7 +30,7 @@ export const AboutSection: React.FC = () => {
             Professional Overview
           </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-black tracking-tight text-zinc-900 animate-fade-in">
-            About Julient Chinye
+            About Juliet Chinye
           </h2>
           <div className="w-12 h-1 bg-amber-500 mt-3 rounded" />
         </div>

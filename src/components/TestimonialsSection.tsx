@@ -51,13 +51,10 @@ export const TestimonialsSection: React.FC = () => {
 
               {/* Client Profile details footer */}
               <div className="flex items-center space-x-4 border-t border-zinc-100 pt-6 mt-auto">
-                <div className="w-11 h-11 rounded-full border border-zinc-200 p-0.5 overflow-hidden">
-                  <img
-                    src={review.avatarUrl}
-                    alt={review.name}
-                    className="w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
-                    referrerPolicy="no-referrer"
-                  />
+                <div className="w-11 h-11 rounded-full border border-zinc-200 p-0.5 overflow-hidden flex items-center justify-center bg-white shadow-sm shrink-0">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-amber-500/10 to-amber-600/5 group-hover:from-amber-500 group-hover:to-amber-600 flex items-center justify-center text-amber-700 group-hover:text-white font-serif font-black text-xs select-none transition-all duration-300">
+                    {review.name.split(" ").map(n => n[0]).join("")}
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-xs font-sans font-bold text-zinc-800 uppercase tracking-tight">{review.name}</h4>

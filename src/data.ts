@@ -1,6 +1,6 @@
 import { Service, Experience, Metric, Testimonial, Skill, Tool } from "./types";
 
-export const PORTFOLIO_NAME = "Julient Chinye";
+export const PORTFOLIO_NAME = "Juliet Chinye";
 export const PORTFOLIO_TITLE = "Professional Virtual Assistant & Administrative Support Specialist";
 export const PORTFOLIO_SUBTITLE = "Helping entrepreneurs, executives, and growing businesses streamline operations, improve productivity, and focus on what matters most.";
 
@@ -215,8 +215,8 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Executive Director",
     company: "Heartleap Educational Results",
     rating: 5,
-    feedback: "Julient was a monumental asset for our team. Her legal background gives her research skills an extraordinary edge and her administrative organizational talent is truly world class. Highly recommended!",
-    avatarUrl: "https://picsum.photos/seed/amanda/100/100"
+    feedback: "Juliet was a monumental asset for our team. Her legal background gives her research skills an extraordinary edge and her administrative organizational talent is truly world class. Highly recommended!",
+    avatarUrl: ""
   },
   {
     id: "t2",
@@ -224,8 +224,8 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Lead Facilitator",
     company: "MidasTouch Initiative",
     rating: 5,
-    feedback: "Julient is lightning fast, reliable, and operates with absolute integrity. She structured our social media calendar, handled double-bookings effortlessly, and completely revamped our digital community outreach.",
-    avatarUrl: "https://picsum.photos/seed/kenneth/100/100"
+    feedback: "Juliet is lightning fast, reliable, and operates with absolute integrity. She structured our social media calendar, handled double-bookings effortlessly, and completely revamped our digital community outreach.",
+    avatarUrl: ""
   },
   {
     id: "t3",
@@ -233,14 +233,14 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "President",
     company: "Beauty4Ashes Initiative",
     rating: 5,
-    feedback: "We run a fast-paced NGO, and Julient stepped in with incredible poise. She's extremely articulate, detail-oriented, and structured our communications. She made virtual coordination look completely effortless.",
-    avatarUrl: "https://picsum.photos/seed/elaine/100/100"
+    feedback: "We run a fast-paced NGO, and Juliet stepped in with incredible poise. She's extremely articulate, detail-oriented, and structured our communications. She made virtual coordination look completely effortless.",
+    avatarUrl: ""
   }
 ];
 
 export const CONTACT_INFO = {
-  email: "julientchinye@gmail.com", // Realistic professional placeholder based on name
-  whatsapp: "+2348123456789", // Realistic professional placeholder
-  linkedin: "https://linkedin.com/in/julient-chinye",
-  facebook: "https://facebook.com/julient.chinye.va"
+  email: "chinyejuliet01@gmail.com", // Realistic professional placeholder based on name
+  whatsapp: "+2347047707469", // Realistic professional placeholder
+  linkedin: "https://linkedin.com/in/juliet-chinye",
+  facebook: "https://facebook.com/juliet.chinye.va"
 };

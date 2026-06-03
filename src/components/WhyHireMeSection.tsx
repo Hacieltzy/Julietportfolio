@@ -21,7 +21,7 @@ export const WhyHireMeSection: React.FC = () => {
             Why Partner With Me
           </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-black tracking-tight text-zinc-900 animate-fade-in">
-            Why Hire Julient?
+            Why Hire Juliet?
           </h2>
           <div className="w-12 h-1 bg-amber-500 mx-auto mt-3 rounded" />
         </div>

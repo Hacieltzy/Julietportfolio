@@ -75,7 +75,7 @@ export const ContactSection: React.FC = () => {
                 {/* Back ambient accent */}
                 <div className="absolute bottom-0 right-0 w-32 h-32 bg-amber-400/5 rounded-full blur-2xl pointer-events-none" />
 
-                <h4 className="text-zinc-800 font-sans font-bold text-2xl tracking-tight mb-2">Julient Chinye</h4>
+                <h4 className="text-zinc-800 font-sans font-bold text-2xl tracking-tight mb-2">Juliet Chinye</h4>
                 <p className="text-amber-600 font-mono text-[10px] uppercase tracking-widest mb-6 border-b border-zinc-100 pb-4 font-bold">
                   Virtual Assistant Specialist
                 </p>
@@ -108,7 +108,7 @@ export const ContactSection: React.FC = () => {
                         rel="noopener noreferrer"
                         className="text-zinc-800 hover:text-amber-600 transition-colors text-xs sm:text-sm font-sans font-semibold inline-flex items-center space-x-1"
                       >
-                        <span>WhatsApp Business</span>
+                        <span>+234 704 770 7469</span>
                       </a>
                     </div>
                   </div>

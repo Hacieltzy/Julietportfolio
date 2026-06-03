@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck, Clock, Award, Check } from "lucide-react";
-import { PORTFOLIO_NAME, PORTFOLIO_TITLE, PORTFOLIO_SUBTITLE, PROFILE_IMAGE } from "../data";
+import { PORTFOLIO_TITLE, PORTFOLIO_SUBTITLE } from "../data";
 
 export const HeroSection: React.FC = () => {
   const handleScrollTo = (id: string) => {
@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-black tracking-tight text-zinc-900 mb-4 leading-tight"
               >
-                Julient Chinye
+                Juliet Chinye
                 <span className="text-sm font-semibold text-zinc-500 block mt-1 font-mono tracking-widest uppercase">
                   {PORTFOLIO_TITLE}
                 </span>
@@ -83,7 +83,7 @@ export const HeroSection: React.FC = () => {
                 id="hero-cta-contact"
                 className="px-6 py-3.5 bg-amber-500 hover:bg-amber-600 text-white text-xs uppercase font-mono font-bold tracking-wider rounded-xl shadow-lg shadow-amber-500/10 transition-all duration-200 flex items-center justify-center space-x-2 group hover:-translate-y-0.5 cursor-pointer"
               >
-                <span>Hire Julient Chinye</span>
+                <span>Hire Juliet Chinye</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </button>
               

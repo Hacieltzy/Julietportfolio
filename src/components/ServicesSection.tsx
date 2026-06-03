@@ -153,7 +153,7 @@ export const ServicesSection: React.FC = () => {
                 {/* Quality Seal Footer representation */}
                 <div className="flex items-center space-x-2 text-[10px] font-mono text-amber-600 border-t border-zinc-100/80 pt-4 mt-auto">
                   <Check size={11} className="shrink-0" />
-                  <span className="uppercase tracking-widest font-bold">SLA Compliant Support</span>
+                  <span className="uppercase tracking-widest font-bold">Dedicated Support</span>
                 </div>
               </motion.div>
             ))}

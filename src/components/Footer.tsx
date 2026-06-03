@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
         {/* Footer Sub-bottom segment */}
         <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[11px] gap-4">
           <div>
-            &copy; {currentYear} {PORTFOLIO_NAME}. All rights reserved under SLA terms.
+            &copy; {currentYear} {PORTFOLIO_NAME}. All rights reserved.
           </div>
           <div className="flex items-center space-x-1 font-sans text-zinc-500">
             <span>Developed by:</span>
