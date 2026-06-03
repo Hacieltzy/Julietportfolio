@@ -114,10 +114,9 @@ export const Footer: React.FC = () => {
           <div>
             &copy; {currentYear} {PORTFOLIO_NAME}. All rights reserved under SLA terms.
           </div>
-          <div className="flex items-center space-x-1">
-            <span>Crafted with</span>
-            <Heart size={10} className="fill-red-500 text-red-500" />
-            <span>for elite business productivity coordinators.</span>
+          <div className="flex items-center space-x-1 font-sans text-zinc-500">
+            <span>Developed by:</span>
+            <span className="font-semibold text-zinc-700">Haciel Casihan</span>
           </div>
         </div>
 

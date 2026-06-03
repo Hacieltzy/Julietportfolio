@@ -23,7 +23,7 @@ export const ContactSection: React.FC = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      setErrorMessage("Please complete all fields prior to dispatching your request.");
+      setErrorMessage("Please complete all fields prior to sending your message.");
       return;
     }
 
@@ -243,12 +243,12 @@ export const ContactSection: React.FC = () => {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="animate-spin text-white" size={16} />
-                        <span>Dispatching Correspondence...</span>
+                        <span>Sending Message...</span>
                       </>
                     ) : (
                       <>
                         <Send size={14} />
-                        <span>Dispatch Message</span>
+                        <span>Send Message</span>
                       </>
                     )}
                   </button>
@@ -265,9 +265,9 @@ export const ContactSection: React.FC = () => {
                     <CheckCircle2 size={32} className="stroke-[2.5]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-sans font-bold text-zinc-800 leading-tight">Message Dispatched!</h4>
+                    <h4 className="text-xl font-sans font-bold text-zinc-800 leading-tight">Message Sent Successfully!</h4>
                     <p className="text-zinc-500 text-xs sm:text-sm mt-3 leading-relaxed max-w-sm mx-auto font-sans">
-                      Thank you, <strong className="text-zinc-800">{formData.name}</strong>. Your inquiries have been securely routed to Julient's active operational queue. We will check in with you within 12 business hours.
+                      Thank you, <strong className="text-zinc-800">{formData.name}</strong>. Your message has been successfully sent. We will get back to you within 12 business hours.
                     </p>
                   </div>
                   
